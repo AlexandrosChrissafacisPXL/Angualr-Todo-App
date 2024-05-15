@@ -14,4 +14,14 @@ export class AppComponent {
     {id: 4, title: 'Setup API', completed: false},
     {id: 4, title: 'Test app', completed: false},
   ];
+
+  addTodos() {
+    for (let i = 0; i < 100; i++) {
+      this.todos.push({
+        id: this.todos.length + 1,
+        title: 'New todo' + (this.todos.length + 1),
+        completed: false
+      });
+    }
+  }
 }
